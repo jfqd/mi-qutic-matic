@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+# upgrade system
+/opt/local/bin/pkgin -y ug
+/opt/local/bin/pkgin clean
+# fix common issues
+/usr/sbin/svcadm restart nullmailer
+
+/usr/sbin/svcadm restart php-fpm
+/usr/sbin/svcadm restart nginx
+
+/opt/local/bin/sed -i "s#/var/log/nginx/.*##" /etc/logadm.conf
+
+/usr/bin/svcs -vx

@@ -1,0 +1,8 @@
+name="qutic-mautic"
+organization="qutic development"
+brand="mautic instance"
+version="20220708.0"
+description="qutic mautic 4.4.1 image"
+homepage="https://github.com/jfqd/mi-qutic-mautic"
+users="root admin"
+base="9ec9ef9e-04de-11ed-a33b-7fdb1b06e8a3"
