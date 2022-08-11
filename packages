@@ -38,6 +38,5 @@ percona-client
 # web
 nginx
 sudo
-redis
 htop
 unzip
