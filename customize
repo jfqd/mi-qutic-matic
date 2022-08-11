@@ -8,12 +8,11 @@ MAUTIC_VERSION="4.4.1"
 DESTDIR="/var/www/htdocs/mautic"
 
 echo "* Install mautic"
-mkdir -p "${DESTDIR}/releases"
-cd "${DESTDIR}/releases"
+mkdir -p "${DESTDIR}/releases/mautic-${MAUTIC_VERSION}"
+cd "${DESTDIR}/releases/mautic-${MAUTIC_VERSION}"
 curl -s -L -O https://download.qutic.com/src/mautic/${MAUTIC_VERSION}.zip
 unzip ${MAUTIC_VERSION}.zip
 rm ${MAUTIC_VERSION}.zip
-mv ${MAUTIC_VERSION} mautic-${MAUTIC_VERSION}
 cd $DESTDIR
 ln -nfs $DESTDIR/releases/mautic-${MAUTIC_VERSION} current
 chown -R www:www "$DESTDIR"
