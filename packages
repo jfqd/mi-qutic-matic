@@ -40,3 +40,4 @@ nginx
 sudo
 redis
 htop
+unzip
