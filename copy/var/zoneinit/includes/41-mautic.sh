@@ -69,7 +69,7 @@ cat > /var/www/htdocs/mautic/current/app/config/local.php << EOF
         'site_url' => '${SITE_URL}',
 );
 EOF
-chown www:www /var/www/htdocs/mautic/releases/mautic-4.4.1/app/config/local.php
+chown www:www /var/www/htdocs/mautic/current/app/config/local.php
 
 echo "Fix Gravatar usage"
 sed -i \
