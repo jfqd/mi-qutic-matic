@@ -21,7 +21,7 @@ echo "* Change www for cronjobs"
 usermod -d "$DESTDIR" -s /usr/bin/bash www
 
 echo "* Add commands to bash-history";
-cat >> /root/.bash_history << EOF
+cat > /root/.bash_history << EOF
 su - www
 tail -f /var/log/php-fpm.log
 tail -f /var/log/nginx/access.log
