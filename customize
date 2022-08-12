@@ -15,6 +15,8 @@ unzip ${MAUTIC_VERSION}.zip
 rm ${MAUTIC_VERSION}.zip
 cd $DESTDIR
 ln -nfs $DESTDIR/releases/mautic-${MAUTIC_VERSION} current
+cp /var/www/htdocs/mautic/current/app/bundles/CoreBundle/Templating/Helper/GravatarHelper.php \
+  /var/www/htdocs/mautic/current/app/bundles/CoreBundle/Templating/Helper/GravatarHelper.php.bak
 chown -R www:www "$DESTDIR"
 
 echo "* Change www for cronjobs"
