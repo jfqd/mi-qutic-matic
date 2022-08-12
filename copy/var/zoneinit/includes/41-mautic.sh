@@ -37,7 +37,7 @@ MAIL_USR=""
 MAIL_PWD=""
 
 cp /var/www/htdocs/mautic/current/app/config/local.php \
-  /var/www/htdocs/mautic/current/app/config/local.php.bak
+  /var/www/htdocs/mautic/current/app/config/local.php.bak || true
 
 cat > /var/www/htdocs/mautic/current/app/config/local.php << EOF
 <?php
