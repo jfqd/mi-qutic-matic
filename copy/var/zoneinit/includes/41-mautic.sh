@@ -41,7 +41,7 @@ cp /var/www/htdocs/mautic/current/app/config/local.php \
 
 cat > /var/www/htdocs/mautic/current/app/config/local.php << EOF
 <?php
-$parameters = array(
+\$parameters = array(
         'db_driver' => 'pdo_mysql',
         'db_host' => '${MYSQL_HOST}',
         'db_table_prefix' => null,
@@ -69,6 +69,7 @@ $parameters = array(
         'site_url' => '${SITE_URL}',
 );
 EOF
+chown www:www /var/www/htdocs/mautic/releases/mautic-4.4.1/app/config/local.php
 
 echo "Fix Gravatar usage"
 sed -i \
