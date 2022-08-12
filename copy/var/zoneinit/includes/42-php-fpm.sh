@@ -13,7 +13,10 @@ sed -i \
     "s:nc.example.com:$(mdata-get server_name):g" \
     /opt/local/etc/nginx/nginx.conf
 
-# Enable PHP-FPM
+# create cert folder
+mkdir -p /opt/local/etc/nginx/ssl
 chmod 0700 /opt/local/etc/nginx/ssl
+
+# Enable PHP-FPM
 /usr/sbin/svcadm enable svc:/pkgsrc/php-fpm:default
 /usr/sbin/svcadm enable nginx
